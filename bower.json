@@ -1,0 +1,16 @@
+{
+  "name": "UI-Progress",
+  "description": "Progress - Semantic UI",
+  "homepage": "http://beta.semantic-ui.com",
+  "author": {
+    "name": "Jack Lukic",
+    "web": "http://www.jacklukic.com"
+  },
+  "ignore": ["docs", "node", "server", "spec", "src", "test"],
+  "keywords": ["semantic", "ui", "css3", "framework"],
+  "license": ["http://semantic-ui.mit-license.org/"],
+  "main": ["progress.js", "progress.css"],
+  "dependencies": {
+    "jquery": ">=1.8"
+  }
+}
