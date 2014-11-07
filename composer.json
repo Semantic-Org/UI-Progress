@@ -14,9 +14,5 @@
     "jquery": "x.x.x"
   },
   "main": "progress.js",
-<<<<<<< HEAD
   "version": "1.0.0-beta"
-=======
-  "version": "1.0.0"
->>>>>>> f6491968d847adf8ac3f4f8b12ada9b98ce87a0e
 }
