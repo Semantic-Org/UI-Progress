@@ -334,6 +334,7 @@ module.exports = function(parameters) {
             if(text) {
               module.set.label(text);
             }
+            $.proxy(settings.onActive, element)(module.value, module.total);
           },
           success : function(text) {
             text = text || settings.text.success;
@@ -346,6 +347,7 @@ module.exports = function(parameters) {
             if(text) {
               module.set.label(text);
             }
+            $.proxy(settings.onSuccess, element)(module.total);
           },
           warning : function(text) {
             text = text || settings.text.warning;
@@ -358,6 +360,7 @@ module.exports = function(parameters) {
             if(text) {
               module.set.label(text);
             }
+            $.proxy(settings.onWarning, element)(module.value, module.total);
           },
           error : function(text) {
             text = text || settings.text.error;
@@ -370,6 +373,7 @@ module.exports = function(parameters) {
             if(text) {
               module.set.label(text);
             }
+            $.proxy(settings.onError, element)(module.value, module.total);
           },
           total: function(totalValue) {
             module.total = totalValue;
@@ -579,14 +583,14 @@ module.exports = function(parameters) {
 
 module.exports.settings = {
 
-  name        : 'Progress',
-  namespace   : 'progress',
+  name         : 'Progress',
+  namespace    : 'progress',
 
-  debug       : false,
-  verbose     : true,
-  performance : true,
+  debug        : false,
+  verbose      : true,
+  performance  : true,
 
-  random      : {
+  random       : {
     min : 2,
     max : 5
   },
@@ -602,6 +606,10 @@ module.exports.settings = {
   value        : false,
 
   onChange     : function(percent, value, total){},
+  onSuccess    : function(total){},
+  onActive     : function(value, total){},
+  onError      : function(value, total){},
+  onWarning    : function(value, total){},
 
   error    : {
     method     : 'The method you called is not defined.',
@@ -617,7 +625,6 @@ module.exports.settings = {
     total   : 'total',
     value   : 'value'
   },
-
 
   selector : {
     bar      : '> .bar',
