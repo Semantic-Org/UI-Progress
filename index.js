@@ -21,13 +21,13 @@ module.exports = function(parameters) {
 
     moduleSelector = $allModules.selector || '',
 
-    hasTouch       = ('ontouchstart' in document.documentElement),
     time           = new Date().getTime(),
     performance    = [],
 
     query          = arguments[0],
     methodInvoked  = (typeof query == 'string'),
     queryArguments = [].slice.call(arguments, 1),
+
     returnedValue
   ;
 
@@ -75,10 +75,9 @@ module.exports = function(parameters) {
         },
 
         destroy: function() {
-          module.verbose('Destroying previous dropdown for', $module);
-          $module
-            .removeData(moduleNamespace)
-          ;
+          module.verbose('Destroying previous progress for', $module);
+          module.remove.state();
+          $module.removeData(moduleNamespace);
           instance = undefined;
         },
 
@@ -218,6 +217,12 @@ module.exports = function(parameters) {
         },
 
         remove: {
+          state: function() {
+            module.verbose('Removing stored state');
+            delete module.total;
+            delete module.percent;
+            delete module.value;
+          },
           active: function() {
             module.verbose('Removing active state');
             $module.removeClass(className.active);
@@ -241,27 +246,34 @@ module.exports = function(parameters) {
             if(value > 100) {
               module.error(error.tooHigh, value);
             }
-            $bar
-              .css('width', value + '%')
-            ;
+            else if (value < 0) {
+              module.error(error.tooLow, value);
+            }
+            else {
+              $bar
+                .css('width', value + '%')
+              ;
+            }
           },
           initials: function() {
-            if(settings.value) {
-              module.verbose('Current value set in settings', settings.value);
-              module.value = settings.value;
-            }
-            if(settings.total) {
+
+            if(settings.total !== false) {
               module.verbose('Current total set in settings', settings.total);
               module.total = settings.total;
             }
-            if(settings.percent) {
+            if(settings.value !== false) {
+              module.verbose('Current value set in settings', settings.value);
+              module.value = settings.value;
+            }
+            if(settings.percent !== false) {
               module.verbose('Current percent set in settings', settings.percent);
               module.percent = settings.percent;
             }
-            if(module.percent) {
+
+            if(module.percent !== undefined) {
               module.set.percent(module.percent);
             }
-            else if(module.value) {
+            else if(module.value !== undefined) {
               module.set.progress(module.value);
             }
           },
@@ -285,6 +297,14 @@ module.exports = function(parameters) {
             if(module.total) {
               module.value = Math.round( (percent / 100) * module.total);
             }
+            if(settings.limitValues) {
+              module.value = (module.value > 100)
+                ? 100
+                : (module.value < 0)
+                  ? 0
+                  : module.value
+              ;
+            }
             module.set.barWidth(percent);
             module.set.barLabel();
             if(percent === 100) {
@@ -296,7 +316,7 @@ module.exports = function(parameters) {
                 module.remove.active();
               }
             }
-            else {
+            else if(percent > 0) {
               module.set.active();
             }
             $.proxy(settings.onChange, element)(percent, module.value, module.total);
@@ -387,8 +407,8 @@ module.exports = function(parameters) {
                 : value,
               percentComplete
             ;
-            if(!numericValue) {
-              module.error(error.nonNumeric);
+            if(numericValue === false) {
+              module.error(error.nonNumeric, value);
             }
             if(module.total) {
               module.value    = numericValue;
@@ -597,6 +617,7 @@ module.exports.settings = {
 
   autoSuccess  : true,
   showActivity : true,
+  limitValues  : true,
 
   label        : 'percent',
   precision    : 1,
@@ -613,7 +634,9 @@ module.exports.settings = {
 
   error    : {
     method     : 'The method you called is not defined.',
-    nonNumeric : 'Progress value is non numeric'
+    nonNumeric : 'Progress value is non numeric',
+    tooHigh    : 'Value specified is above 100%',
+    tooLow     : 'Value specified is below 0%'
   },
 
   regExp: {
