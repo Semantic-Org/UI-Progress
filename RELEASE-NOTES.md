@@ -1,3 +1,7 @@
+### Version 1.4.0 - December 22, 2014
+
+- **Progress** - Fixes bug where ``ui indicating progress`` would not update its label immediately in webkit
+
 ### Version 1.2.0 - December 08, 2014
 
 - **Progress** - Adds ``limitValues`` setting to adjust values outside of 0-100 automatically to within range, defaults to true

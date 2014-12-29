@@ -253,6 +253,9 @@ module.exports = function(parameters) {
               $bar
                 .css('width', value + '%')
               ;
+              $module
+                .attr('data-percent', parseInt(value, 10))
+              ;
             }
           },
           initials: function() {
