@@ -8,11 +8,20 @@
     "web": "http://www.jacklukic.com",
     "role": "Creator"
   }],
-  "keywords": ["semantic", "ui", "css", "framework"],
+  "keywords": [
+    "semantic",
+    "ui",
+    "css",
+    "framework"
+  ],
   "license": "MIT",
   "dependencies": {
     "jquery": "x.x.x"
   },
   "main": "progress.js",
+<<<<<<< HEAD
   "version": "1.0.0-beta"
+=======
+  "version": "1.7.2"
+>>>>>>> 09b651f5af95b88e2950d9215ddace510b69079e
 }

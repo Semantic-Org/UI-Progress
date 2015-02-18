@@ -1,6 +1,10 @@
 {
   "name": "semantic-ui-progress",
+<<<<<<< HEAD
   "version": "1.0.0-beta",
+=======
+  "version": "1.7.2",
+>>>>>>> 09b651f5af95b88e2950d9215ddace510b69079e
   "title": "Semantic UI - Progress",
   "description": "Single component release of progress",
   "homepage": "http://www.semantic-ui.com",
@@ -8,7 +12,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Semantic-Org/UI-Progress.git"
+    "url": "https://github.com/Semantic-Org/UI-Progress.git"
   },
   "bugs": {
     "url": "https://github.com/Semantic-Org/Semantic-UI/issues"
