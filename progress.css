@@ -1,13 +1,5 @@
  /*
-<<<<<<< HEAD
  * # Semantic UI - 1.9.0
-=======
-<<<<<<< HEAD
- * # Semantic UI - 1.9.0
-=======
- * # Semantic UI - 1.7.2
->>>>>>> 09b651f5af95b88e2950d9215ddace510b69079e
->>>>>>> 74660c09e68962e3c50546352407bb69f470274d
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
  *
@@ -329,15 +321,7 @@
 .ui.progress.attached,
 .ui.progress.attached .bar {
   display: block;
-<<<<<<< HEAD
   height: 0.2rem;
-=======
-<<<<<<< HEAD
-  height: 0.2rem;
-=======
-  height: 3px;
->>>>>>> 09b651f5af95b88e2950d9215ddace510b69079e
->>>>>>> 74660c09e68962e3c50546352407bb69f470274d
   padding: 0px;
   overflow: hidden;
   border-radius: 0em 0em 0.2857rem 0.2857rem;
@@ -451,10 +435,6 @@
 }
 .ui.progress .bar {
   height: 1.75em;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 74660c09e68962e3c50546352407bb69f470274d
 }
 .ui.large.progress {
   font-size: 1.14285714rem;
@@ -462,18 +442,6 @@
 .ui.large.progress .bar {
   height: 2.5em;
 }
-<<<<<<< HEAD
-=======
-=======
-}
-.ui.large.progress {
-  font-size: 1.14285714rem;
-}
-.ui.large.progress .bar {
-  height: 2.5em;
-}
->>>>>>> 09b651f5af95b88e2950d9215ddace510b69079e
->>>>>>> 74660c09e68962e3c50546352407bb69f470274d
 .ui.big.progress {
   font-size: 1.28571429rem;
 }
