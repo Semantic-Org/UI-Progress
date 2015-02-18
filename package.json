@@ -1,0 +1,25 @@
+{
+  "name": "semantic-ui-progress",
+<<<<<<< HEAD
+  "version": "1.0.0-beta",
+=======
+  "version": "1.7.2",
+>>>>>>> 09b651f5af95b88e2950d9215ddace510b69079e
+  "title": "Semantic UI - Progress",
+  "description": "Single component release of progress",
+  "homepage": "http://www.semantic-ui.com",
+  "author": "Jack Lukic <jack@semantic-ui.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Semantic-Org/UI-Progress.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Semantic-Org/Semantic-UI/issues"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "jquery": "x.x.x"
+  },
+  "main": "index.js"
+}
