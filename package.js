@@ -2,7 +2,7 @@
 Package.describe({
   name    : 'semantic:ui-progress',
   summary : 'Semantic UI - Progress: Single component release',
-  version : '1.11.6',
+  version : '1.11.7',
   git     : 'git://github.com/Semantic-Org/UI-Progress.git',
 });
 
