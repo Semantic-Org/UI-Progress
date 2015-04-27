@@ -1,3 +1,7 @@
+### Version 1.12.1 - April 26, 2015
+
+- **Progress* - Fixes rounding error in precision settings *Thanks @aaroncox*
+
 ### Version 1.7.(1-2) - January 15, 2015
 
 - **UI** - Fixes `progress`, `ad`, and `sidebar` not loading `.override` files correctly
