@@ -1,3 +1,9 @@
+### Version 2.0.0 - June 30, 2015
+
+- **Progress** - `indicating` labels now are more legible use separate css variables from `indicating` bar color
+- **Progress** - Fixed bug where percentage complete values between 0-1% would display incorrectly (0.5% would show as 50%)
+- **Progress** - Update contrast on `indicating`, update default styles. Fixed some examples
+
 ### Version 1.12.1 - April 26, 2015
 
 - **Progress* - Fixes rounding error in precision settings *Thanks @aaroncox*
