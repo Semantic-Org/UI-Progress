@@ -1,3 +1,7 @@
+### Version 2.0.1 - June 30, 2015
+
+- **Progress** - Progress included `debug: true` by default. This has been now correctly set to `false`
+
 ### Version 2.0.0 - June 30, 2015
 
 - **Progress** - `indicating` labels now are more legible use separate css variables from `indicating` bar color
