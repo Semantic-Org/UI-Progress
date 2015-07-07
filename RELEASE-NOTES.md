@@ -1,4 +1,4 @@
-### Version 2.0.1 - June 30, 2015
+### Version 2.0.1 - July 6, 2015
 
 - **Progress** - Progress included `debug: true` by default. This has been now correctly set to `false`
 
