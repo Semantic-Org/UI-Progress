@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.0.7 - Progress
+ * # Semantic UI 2.0.8 - Progress
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -716,7 +716,7 @@ module.exports = function(parameters) {
   ;
 };
 
-module.exports.settings = {
+_module.exports.settings = {
 
   name         : 'Progress',
   namespace    : 'progress',
