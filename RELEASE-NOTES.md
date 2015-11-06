@@ -1,3 +1,8 @@
+### Version 2.1.5 - Nov 1, 2015
+
+- **Progress* - Calling `reset` will now reset `value` to 0, so increment starts again at 0
+- **Progress** - Progress example code no longer shows accidental inline css
+
 ### Version 2.0.1 - July 6, 2015
 
 - **Progress** - Progress included `debug: true` by default. This has been now correctly set to `false`

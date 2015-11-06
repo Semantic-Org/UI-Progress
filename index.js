@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.1.4 - Progress
+ * # Semantic UI 2.1.6 - Progress
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -90,6 +90,7 @@ module.exports = function(parameters) {
 
         reset: function() {
           module.set.percent(0);
+          module.set.value(0);
         },
 
         complete: function() {
@@ -792,4 +793,4 @@ _module.exports.settings = {
 };
 
 
-})( require("jquery"), window , document );
+})( require("jquery"), window, document );
