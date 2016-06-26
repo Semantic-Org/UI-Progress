@@ -1,3 +1,12 @@
+### Version 2.2.0 - June 26, 2016
+
+- **Progress** - Progress now uses a polling interval for updates. Rapidly updating the progress bar over a period quicker than the animation duration (for example with xhr `onprogress` events say every 50ms) will now appear smooth as butter.
+- **Progress** - Added `onLabelUpdate` callback, this can be used to specify the exact text that should appear on the actual progress update, perhaps based on some external conditions
+- **Progress** - Added progress `is complete` for returning whether success, warning, or error conditions are met
+- **Progress** - Progress `onSuccess`, `onError`, and `onWarning` callbacks now occur **after** the animation completes for the state change.
+- **Progress** - Added new examples to progress
+- **Progress** - Added all available behaviors with progress
+
 ### Version 2.1.5 - Nov 1, 2015
 
 - **Progress* - Calling `reset` will now reset `value` to 0, so increment starts again at 0
