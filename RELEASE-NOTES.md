@@ -1,3 +1,7 @@
+### Version 2.2.5 - October, 27, 2016
+
+- **Progress** - Progress now includes transitionEnd failback for progress bar animations, this will prevent labels from continuing to be updated if the `transitionEnd` css callback does not fire correctly
+
 ### Version 2.2.0 - June 26, 2016
 
 - **Progress** - Progress now uses a polling interval for updates. Rapidly updating the progress bar over a period quicker than the animation duration (for example with xhr `onprogress` events say every 50ms) will now appear smooth as butter.
